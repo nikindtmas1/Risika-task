@@ -6,7 +6,7 @@ import { companyRelations } from "@/requests"
 export default function Company() {
   const router = useRouter()
   const { id } = router.query
-
+  console.log(id);
   const [relations, setRelations] = React.useState(null)
 
   React.useEffect(() => {
@@ -16,6 +16,6 @@ export default function Company() {
       })
     }
   }, [id])
-
+console.log(relations);
   return <div>{relations ? <Management relations={relations} /> : null}</div>
 }
