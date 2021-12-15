@@ -36,7 +36,14 @@ const Highlights = () => {
         <Layout>
             <div className="container">
               
-            {arrayData.map(x => <Tamplate title={x[0]}/>)}
+            {arrayData.map(x =>  
+            <div class="panel panel-default">
+                <div class="panel-heading">{x[0]}</div>
+                {Object.keys(x[1]).map(x => 
+                    
+                <div class="panel-body">{x}</div>
+                    )}
+            </div>)}
             
             </div>
         </Layout>
