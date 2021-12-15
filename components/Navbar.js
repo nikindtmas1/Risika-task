@@ -2,11 +2,17 @@ import Link from "next/link";
 
 const Navbar = () => (
     <div>
-        <ul>
-            <li><Link href="/"><a>Home</a></Link></li>
-            <li><Link href="/company"><a>Company</a></Link></li>
-        </ul>
-        <style jsx>{`
+
+        <nav class="navbar navbar-inverse">
+            ...
+
+            <Link href="/"><a>Home</a></Link>
+            ...
+            <Link href="/company"><a>Company</a></Link>
+
+        </nav>
+        
+        {/* <style jsx>{`
         ul {
             background: #c0c0c0;
             color: #ff0000;
@@ -23,7 +29,7 @@ const Navbar = () => (
             color; #ff0000;
             text-decoration: none;
         }
-        `}</style>
+        `}</style> */}
     </div>
 );
 
