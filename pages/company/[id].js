@@ -2,6 +2,8 @@ import * as React from "react"
 import { useRouter } from "next/router"
 import Management from "@/components/Management"
 import { companyRelations } from "@/requests"
+import Layout from "@/components/Layout"
+
 
 export default function Company() {
   const router = useRouter()
@@ -17,5 +19,11 @@ export default function Company() {
     }
   }, [id])
 
-  return <div>{relations ? <Management relations={relations} /> : null}</div>
+  return (
+    <Layout>
+
+      <div>{relations ? <Management relations={relations} /> : null}</div>
+    </Layout>
+  )
+ 
 }
