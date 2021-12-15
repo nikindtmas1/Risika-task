@@ -23,7 +23,7 @@ export default function Home() {
     }
   }, [companyName]);
 
-  console.log(companyData);
+
   return (
     <Layout>
       <div className="container">
@@ -52,8 +52,7 @@ export default function Home() {
             </div>
             <h5>Informations <span class="label label-default"></span></h5>
             <p>
-              <a className="btn btn-primary btn-lg" href={host + `/company/${companyData[0].local_organization_id.id}`} role="button">Management</a>
-              <a className="btn btn-primary btn-lg" href={host + `/company/${companyData[0].local_organization_id.id}`} role="button">General</a>
+              <a className="btn btn-primary btn-lg" href={host + `/general/${companyData[0].local_organization_id.id}?name=${companyName}`} role="button">General</a>
               <a className="btn btn-primary btn-lg" href={`/highlights/${companyData[0].local_organization_id.id}`} role="button">Highlights</a>
               <a className="btn btn-primary btn-lg" href={host + `/company/${companyData[0].local_organization_id.id}`} role="button">Relations</a>
             </p>

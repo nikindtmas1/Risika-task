@@ -57,7 +57,8 @@ const Highlights = () => {
             {sortedData.map(x =>  
             <div class="panel panel-default">
                 <div class="panel-heading">{x[0]}</div>
-                {Object.keys(x[1]).forEach(key => 
+                <a className="btn btn-secondary btn-lg" href={`/details/${id}?query=${x[0]}`} role="button">Details</a>
+                {Object.keys(x[1]).forEach(key =>
                     
                 <div class="panel-body">{(x[1][key])}</div>
                     )}
