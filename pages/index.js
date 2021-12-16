@@ -68,14 +68,11 @@ export default function Home() {
           </form>
         }
 
-      </div>
-      <picture>
-            <source srcset="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" type="image/svg+xml" />
-            <img src="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" className="img-fluid img-thumbnail" alt="..." />
+        <picture>
+            <source srcset="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" type="image/svg+xml" />
+            <img src="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" className="img-fluid img-thumbnail" alt="..." />
         </picture>
-
-     
-
+      </div>
     </Layout>
   )
 }

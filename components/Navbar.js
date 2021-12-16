@@ -1,23 +1,23 @@
 //import Link from "next/link";
 
 const Navbar = () => (
-    <div>
+    <div className="container">
 
         <ul className="nav nav-pills">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Search</a>
+                <a className="nav-link active" aria-current="page" href="/"><h3>Search</h3></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href={`/highlights/37677892`}>Highlights</a>
+                <a className="nav-link" href={`/highlights/37677892`}><h3>Highlights</h3></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href={`/general/37677892?name=risika`}>General</a>
+                <a className="nav-link" href={`/general/37677892?name=risika`}><h3>General</h3></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href={`/company/37677892`}>Relations</a>
+                <a className="nav-link" href={`/company/37677892`}><h3>Relations</h3></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href={`/basic/37677892`}>Basics</a>
+                <a className="nav-link" href={`/basic/37677892`}><h3>Basics</h3></a>
             </li>
         </ul>
 

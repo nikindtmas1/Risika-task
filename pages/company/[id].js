@@ -19,7 +19,7 @@ export default function Company() {
     }
   }, [id])
 
-  console.log(relations);
+
   return (
     <Layout>
 

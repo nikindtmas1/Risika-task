@@ -61,8 +61,8 @@ const Highlights = () => {
 
     return (
         <Layout>
-          <h3>Highlights Informations</h3>
             <div className="container">
+            <h3>Highlights Informations</h3>
 
             <p>
               <a className="btn btn-primary btn-lg" href={`?sort=negative`} role="button">Sort by negative</a>

@@ -33,9 +33,9 @@ const Basic = () => {
    
 return (
     <Layout>
-          <h3>Basics Informations</h3>
 
         <div className="container">
+          <h3>Basics Informations</h3>
         {arrayData.map(x =>  
             <div class="panel panel-default">
                 <div class="panel-heading">{x[0]}</div>
