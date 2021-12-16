@@ -33,6 +33,8 @@ const Basic = () => {
    
 return (
     <Layout>
+          <h3>Basics Informations</h3>
+
         <div className="container">
         {arrayData.map(x =>  
             <div class="panel panel-default">

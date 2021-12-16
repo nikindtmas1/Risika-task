@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <Layout>
+      
       <div className="container">
         {/* <h1>Good luck! {JSON.stringify(router.query)}</h1> */}
         {/* <h3>Search Company</h3> */}
@@ -68,7 +69,12 @@ export default function Home() {
         }
 
       </div>
+      <picture>
+            <source srcset="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" type="image/svg+xml" />
+            <img src="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" class="img-fluid img-thumbnail" alt="..." />
+        </picture>
 
+     
 
     </Layout>
   )

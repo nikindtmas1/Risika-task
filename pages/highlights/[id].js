@@ -61,6 +61,7 @@ const Highlights = () => {
 
     return (
         <Layout>
+          <h3>Highlights Informations</h3>
             <div className="container">
 
             <p>

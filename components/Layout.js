@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 // import Link from "next/link";
 
 const Layout = (props) => (
+    
     <div>
         <Head>
             <title>Risika</title>
@@ -18,6 +19,7 @@ const Layout = (props) => (
         <Navbar />
 
         {props.children}
+       
     </div>
 
 );
