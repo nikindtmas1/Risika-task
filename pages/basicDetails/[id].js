@@ -77,22 +77,36 @@ const BasicDetails = () => {
         }
 
         Object.keys(dataValue).forEach(key => {
-            arrayValues.push(`${key} => ${dataValue[key]}`)
+            arrayValues.push(` * ${key}  >>>  ${dataValue[key]}`)
         })
+    }
+
+    let result; 
+
+    if(arrayValues){
+
+        result = arrayValues.join('\n');
     }
 
     return (
         <Layout>
-            <div className="container">
-                {
-                    <div class="panel panel-default">
-                        <div class="panel-heading">{
-                            arrayValues.join("  ;  ")
-                            //arrayValues.forEach(row => document.write(row + "<br >"))
-                        }</div>
-
-                    </div>}
-            </div>
+            <textarea className="result" defaultValue={result}></textarea>
+            <picture>
+            <source srcset="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" type="image/svg+xml" />
+            <img src="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" className="img-fluid img-thumbnail" alt="..." />
+            </picture>
+            <style jsx>{`
+            .result {
+            margin: 0px 300px; 
+            width: 1090px;
+            height: 312px;
+            color: blue;
+            font-size: large;
+            }
+            img {
+                margin: 0px 300px
+            }
+            `}</style>
         </Layout>
     );
 }

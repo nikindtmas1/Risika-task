@@ -6,7 +6,8 @@ import Layout from "@/components/Layout";
 const host = "http://localhost:3000";
 
 
-const Highlights = () => {
+const Highlights = (props) => {
+  console.log(props);
   const router = useRouter();
   const { id } = router.query;
 

@@ -5,6 +5,25 @@ import Layout from "@/components/Layout";
 
 const host = "http://localhost:3000";
 
+import { createContext, useContext } from 'react';
+
+let id; 
+
+const AppContext = createContext();
+
+export function AppWrapper({ children }) {
+  let sharedState = {id}
+
+  return (
+    <AppContext.Provider value={sharedState}>
+      {children}
+    </AppContext.Provider>
+  );
+}
+
+export function useAppContext() {
+  return useContext(AppContext);
+}
 
 export default function Home() {
   const router = useRouter();
@@ -18,11 +37,13 @@ export default function Home() {
 
       return fetch(host + `/api/search?query=${companyName}`)
         .then((data) => data.json())
-        .then(({ data }) => { setCompanyData(data) }
-        )
+        .then(({ data }) => { setCompanyData(data) })
     }
   }, [companyName]);
 
+  if(companyData){
+    id = companyData[0].local_organization_id.id
+  }
   return (
     <Layout>
       <div className="container">
@@ -47,7 +68,7 @@ export default function Home() {
             <h5>Informations <span class="label label-default"></span></h5>
             <p>
               <a className="btn btn-primary btn-lg" href={host + `/general/${companyData[0].local_organization_id.id}?name=${companyName}`} role="button">General</a>
-              <a className="btn btn-primary btn-lg" href={`/highlights/${companyData[0].local_organization_id.id}`} role="button">Highlights</a>
+              <a className="btn btn-primary btn-lg" href={`/highlights/${companyData[0].local_organization_id.id}`} role="button" id={`${companyData[0].local_organization_id.id}`}>Highlights</a>
               <a className="btn btn-primary btn-lg" href={host + `/company/${companyData[0].local_organization_id.id}`} role="button">Relations</a>
               <a className="btn btn-primary btn-lg" href={`/basic/${companyData[0].local_organization_id.id}`} role="button">Basic</a>
             </p>

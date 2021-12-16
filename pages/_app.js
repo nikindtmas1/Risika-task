@@ -1,5 +1,9 @@
+//import { AppWrapper } from "."
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // <AppWrapper>
+  // </AppWrapper>
+    return <Component {...pageProps} />
 }
 
 export default MyApp
