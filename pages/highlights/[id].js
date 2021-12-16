@@ -31,8 +31,6 @@ const Highlights = () => {
         sortedData = arrayData;
     }
 
-    console.log(arrayData);
-
     if(router.query.sort === 'negative'){
        sortedData = arrayData.filter(x => x[1].classification === 'negative')
     }else if(router.query.sort === 'positive'){
@@ -62,10 +60,10 @@ const Highlights = () => {
             <div class="panel panel-default">
                 <div class="panel-heading">{x[0]}</div>
                 <a className="btn btn-secondary btn-lg" href={`/details/${id}?query=${x[0]}`} role="button">Details</a>
-                {Object.keys(x[1]).forEach(key =>
+                {/* {Object.keys(x[1]).forEach(key =>
                     
                 <div class="panel-body">{(x[1][key])}</div>
-                    )}
+                    )} */}
             </div>)}
             
             </div>
