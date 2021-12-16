@@ -11,14 +11,12 @@ const Details = () => {
     const router = useRouter();
     const { id } = router.query;
     const title = router.query.query;
-    
+
 
     let arrayData = [];
     let arrayValues = [];
 
     const [companyData, setCompanyData] = React.useState(null);
-
-  
 
     React.useEffect(() => {
 
@@ -43,42 +41,40 @@ const Details = () => {
             dataValue = arrayData[3][1]
         } else if (arrayData[4][0] === title) {
             dataValue = arrayData[4][1]
-        }else if(arrayData[5][0] === title){
+        } else if (arrayData[5][0] === title) {
             dataValue = arrayData[5][1]
-        }else if(arrayData[6][0] === title){
+        } else if (arrayData[6][0] === title) {
             dataValue = arrayData[6][1]
-        }else if(arrayData[7][0] === title){
+        } else if (arrayData[7][0] === title) {
             dataValue = arrayData[7][1]
-        }else if(arrayData[8][0] === title){
+        } else if (arrayData[8][0] === title) {
             dataValue = arrayData[8][1]
-        }else if(arrayData[9][0] === title){
+        } else if (arrayData[9][0] === title) {
             dataValue = arrayData[9][1]
         }
 
 
         Object.keys(dataValue).forEach(key => {
-
-            //console.log(`${key}, ${dataValue[key]}`);
-          arrayValues.push(`${key} => ${dataValue[key]}`)
+            arrayValues.push(`${key} => ${dataValue[key]}`)
         })
     }
 
 
-return (
-    <Layout>
-        <div className="container">
-        {  
-            <div class="panel panel-default">
-                <div class="panel-heading">{
-                    arrayValues.join("  ;  ")
-                    //arrayValues.forEach(row => document.write(row + "<br >"))
-                  }</div>
-                    
-            </div>}
-        </div>
+    return (
+        <Layout>
+            <div className="container">
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{
+                            arrayValues.join("  ;  ")
+                            //arrayValues.forEach(row => document.write(row + "<br >"))
+                        }</div>
 
-    </Layout>
-)
+                    </div>}
+            </div>
+
+        </Layout>
+    )
 }
 
 export default Details;

@@ -23,16 +23,9 @@ export default function Home() {
     }
   }, [companyName]);
 
-
   return (
     <Layout>
-      
       <div className="container">
-        {/* <h1>Good luck! {JSON.stringify(router.query)}</h1> */}
-        {/* <h3>Search Company</h3> */}
-        <div>
-
-        </div>
         {companyData
           ? <div className="jumbotron">
             <h3>Hello, {companyName}!</h3>
@@ -69,8 +62,8 @@ export default function Home() {
         }
 
         <picture>
-            <source srcset="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" type="image/svg+xml" />
-            <img src="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" className="img-fluid img-thumbnail" alt="..." />
+          <source srcset="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" type="image/svg+xml" />
+          <img src="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" className="img-fluid img-thumbnail" alt="..." />
         </picture>
       </div>
     </Layout>
