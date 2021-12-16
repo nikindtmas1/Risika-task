@@ -59,18 +59,22 @@ const Details = () => {
         })
     }
 
-
+    let result = arrayValues.join('\n');
+    console.log(result);
     return (
         <Layout>
             <div className="container">
-                {
-                    <div class="panel panel-default">
-                        <div class="panel-heading">{
-                            arrayValues.join("  ;  ")
+            <blockquote className="blockquote">
+            <p>{result}</p>
+            </blockquote>
+            
+                    {/* <div className="panel panel-default">
+                        <div className="panel-heading">{
+                            result
                             //arrayValues.forEach(row => document.write(row + "<br >"))
                         }</div>
 
-                    </div>}
+                    </div> */}
             </div>
 
         </Layout>
