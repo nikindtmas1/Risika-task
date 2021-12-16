@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       <picture>
             <source srcset="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" type="image/svg+xml" />
-            <img src="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" class="img-fluid img-thumbnail" alt="..." />
+            <img src="https://emerging-europe.com/wp-content/uploads/2019/10/adobestock_235711851-990x556.jpeg" className="img-fluid img-thumbnail" alt="..." />
         </picture>
 
      
