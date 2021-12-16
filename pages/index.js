@@ -55,6 +55,7 @@ export default function Home() {
               <a className="btn btn-primary btn-lg" href={host + `/general/${companyData[0].local_organization_id.id}?name=${companyName}`} role="button">General</a>
               <a className="btn btn-primary btn-lg" href={`/highlights/${companyData[0].local_organization_id.id}`} role="button">Highlights</a>
               <a className="btn btn-primary btn-lg" href={host + `/company/${companyData[0].local_organization_id.id}`} role="button">Relations</a>
+              <a className="btn btn-primary btn-lg" href={`/basic/${companyData[0].local_organization_id.id}`} role="button">Basic</a>
             </p>
           </div>
           : <form className="navbar-form navbar-left" role="search">

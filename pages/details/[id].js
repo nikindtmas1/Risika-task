@@ -66,11 +66,6 @@ const Details = () => {
         })
     }
 
-    
-
-
-
-      console.log(arrayValues);
 
 return (
     <Layout>
