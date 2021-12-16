@@ -31,6 +31,8 @@ const Highlights = () => {
         sortedData = arrayData;
     }
 
+    console.log(arrayData);
+
     if(router.query.sort === 'negative'){
        sortedData = arrayData.filter(x => x[1].classification === 'negative')
     }else if(router.query.sort === 'positive'){
@@ -38,7 +40,9 @@ const Highlights = () => {
     }else if(router.query.sort === 'neutral'){
       sortedData = arrayData.filter(x => x[1].classification === 'neutral')
     }else if(router.query.sort === 'weight'){
-       sortedData = arrayData.filter(x => x[1].classification === 'weight')
+       sortedData = arrayData.sort(function (a, b) {
+        return a[1].weight - b[1].weight;
+      })
     }
 
 
