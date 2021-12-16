@@ -26,38 +26,47 @@ const General = () => {
     }
   }, [companyName]);
 
-console.log(companyData);
+
     return (
         <Layout>
              <div className="container">
             {companyData
             ?   <div className="jumbotron">
-            <h3>{companyName}!</h3>
-            <p></p>
+            <h3>This is {companyName}</h3>
+           
+            <h5>Company Name <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="company name" className="form-control"  defaultValue={companyData[0].company_name} />
             </div>
+            <h5>Email <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="city" className="form-control" defaultValue={companyData[0].email.email} />
             </div>
+            <h5>Phone number <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].phone.phone_number}  />
             </div>
+            <h5>Score <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].score}  />
             </div>
+            <h5>Address <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].address.city}  />
             </div>
+            <h5>Status <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].status}  />
             </div>
+            <h5>Company type <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].company_type.long}  />
             </div>
+            <h5>Local organiztion id <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].local_organization_id.id}  />
             </div>
+            <h5>Risk assessment <span class="label label-default"></span></h5>
             <div className="form-group">
               <input type="text" name="country" className="form-control" defaultValue={companyData[0].risk_assessment}  />
             </div>
