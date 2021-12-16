@@ -1,9 +1,16 @@
 //import Link from "next/link";
+// const home = "http://localhost:3000";
+
+// if(home){
+
+
+// }
 
 const Navbar = () => (
     <div className="container">
 
         <ul className="nav nav-pills">
+            
             <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/"><h3>Search</h3></a>
             </li>
