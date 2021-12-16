@@ -27,9 +27,10 @@ const Basic = () => {
  
     if(companyData != undefined){
         arrayData = Object.entries(companyData);
-     
+    
     }
 
+   
 return (
     <Layout>
         <div className="container">

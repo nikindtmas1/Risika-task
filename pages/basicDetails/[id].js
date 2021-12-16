@@ -27,76 +27,57 @@ const BasicDetails = () => {
     }, [title]);
 
     let dataValue;
-    console.log(companyData);
 
     if(companyData != undefined){
         arrayData = Object.entries(companyData);
        
 
-        arrayData.forEach((row) => {
-            if (row[0] === 'vat') {
-                dataValue = row[1]
-            }else if(row[0] === 'bank'){
-                dataValue = row[1]
-            }else if(row[0] === 'email'){
-                dataValue = row[1]
-            }else if(row[0] === 'phone'){
-                dataValue = row[1]
-            }else if(row[0] === 'score'){
-                dataValue = row[1]
-            }else if(row[0] === 'address'){
-                dataValue = row[1]
-            }else if(row[0] === 'purpose'){
-                dataValue = row[1]
-            }else if(row[0] === 'webpage'){
-                dataValue = row[1]
-            }else if(row[0] === 'status_code'){
-                dataValue = row[1]
-            }else if(row[0] === 'company_name'){
-                dataValue = row[1]
-            }else if(row[0] === 'company_type'){
-                dataValue = row[1]
-            }else if(row[0] === 'audit_selected'){
-                dataValue = row[1]
-            }else if(row[0] === 'financial_year'){
-                dataValue = row[1]
-            }else if(row[0] === 'powers_to_bind'){
-                dataValue = row[1]
-            }else if(row[0] === 'holding_company'){
-                dataValue = row[1]
-            }else if(row[0] === 'last_report_date'){
-                dataValue = row[1]
-            }else if(row[0] === 'financial_reports'){
-                dataValue = row[1]
-            }else if(row[0] === 'status_valid_from'){
-                dataValue = row[1]
-            }else if(row[0] === 'main_industry_code'){
-                dataValue = row[1]
-            }else if(row[0] === 'registered_capital'){
-                dataValue = row[1]
-            }else if(row[0] === 'number_of_employees'){
-                dataValue = row[1]
-            }else if(row[0] === 'risk_assessment_code'){
-                dataValue = row[1]
-            }else if(row[0] === 'date_of_incorporation'){
-                dataValue = row[1]
-            }else if(row[0] === 'local_organization_id'){
-                dataValue = row[1]
-            }else if(row[0] === 'company_secondary_names'){
-                dataValue = row[1]
-            }else if(row[0] === 'advertisement_protection'){
-                dataValue = row[1]
-            }else if(row[0] === 'secondary_industry_codes'){
-                dataValue = row[1]
-            }else if(row[0] === 'status'){
-                dataValue = row[1]
-            }else if(row[0] === 'risk_assessment'){
-                dataValue = row[1]
-            }
-        }
-        )
+       if (arrayData[0][0] === title) {
+        dataValue = arrayData[0][1]
+    } else if (arrayData[1][0] === title) {
+        dataValue = arrayData[1][1]
+    } else if (arrayData[2][0] === title) {
+        dataValue = arrayData[2][1]
+    } else if (arrayData[3][0] === title) {
+        dataValue = arrayData[3][1]
+    } else if (arrayData[4][0] === title) {
+        dataValue = arrayData[4][1]
+    }else if(arrayData[5][0] === title){
+        dataValue = arrayData[5][1]
+    }else if(arrayData[6][0] === title){
+        dataValue = arrayData[6][1]
+    }else if(arrayData[7][0] === title){
+        dataValue = arrayData[7][1]
+    }else if(arrayData[8][0] === title){
+        dataValue = arrayData[8][1]
+    }else if(arrayData[9][0] === title){
+        dataValue = arrayData[9][1]
+    }else if(arrayData[10][0] === title){
+        dataValue = arrayData[10][1]
+    }else if(arrayData[11][0] === title){
+        dataValue = arrayData[11][1]
+    }else if(arrayData[12][0] === title){
+        dataValue = arrayData[12][1]
+    }else if(arrayData[13][0] === title){
+        dataValue = arrayData[13][1]
+    }else if(arrayData[14][0] === title){
+        dataValue = arrayData[14][1]
+    }else if(arrayData[15][0] === title){
+        dataValue = arrayData[15][1]
+    }else if(arrayData[16][0] === title){
+        dataValue = arrayData[16][1]
+    }else if(arrayData[17][0] === title){
+        dataValue = arrayData[17][1]
+    }else if(arrayData[18][0] === title){
+        dataValue = arrayData[18][1]
+    }else if(arrayData[19][0] === title){
+        dataValue = arrayData[19][1]
+    }else if(arrayData[20][0] === title){
+        dataValue = arrayData[20][1]
+    }else if(arrayData[28][0] === title){
+        dataValue = arrayData[28][1]
+    }
 
-        console.log(arrayData);
         Object.keys(dataValue).forEach(key => {
 
             //console.log(`${key}, ${dataValue[key]}`);
@@ -109,10 +90,10 @@ return (
   <div className="container">
         {  
             <div class="panel panel-default">
-                <div class="panel-heading">{`${
+                <div class="panel-heading">{
                     arrayValues.join("  ;  ")
                     //arrayValues.forEach(row => document.write(row + "<br >"))
-                    }`}</div>
+                   }</div>
                     
             </div>}
         </div>

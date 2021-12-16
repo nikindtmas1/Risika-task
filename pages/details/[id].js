@@ -70,8 +70,8 @@ return (
         {  
             <div class="panel panel-default">
                 <div class="panel-heading">{
-                    //arrayValues.join("  ;  ")
-                    arrayValues.forEach(row => document.write(row + "<br >"))
+                    arrayValues.join("  ;  ")
+                    //arrayValues.forEach(row => document.write(row + "<br >"))
                   }</div>
                     
             </div>}

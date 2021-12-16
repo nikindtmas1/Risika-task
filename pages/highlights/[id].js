@@ -33,10 +33,25 @@ const Highlights = () => {
 
     if(router.query.sort === 'negative'){
        sortedData = arrayData.filter(x => x[1].classification === 'negative')
+       if(sortedData){
+         sortedData.sort(function (a, b) {
+          return a[1].weight - b[1].weight;
+        })
+       }
     }else if(router.query.sort === 'positive'){
       sortedData = arrayData.filter(x => x[1].classification === 'positive')
+      if(sortedData){
+        sortedData.sort(function (a, b) {
+         return a[1].weight - b[1].weight;
+       })
+      }
     }else if(router.query.sort === 'neutral'){
       sortedData = arrayData.filter(x => x[1].classification === 'neutral')
+      if(sortedData){
+        sortedData.sort(function (a, b) {
+         return a[1].weight - b[1].weight;
+       })
+      }
     }else if(router.query.sort === 'weight'){
        sortedData = arrayData.sort(function (a, b) {
         return a[1].weight - b[1].weight;
