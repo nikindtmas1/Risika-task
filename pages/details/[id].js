@@ -11,6 +11,7 @@ const Details = () => {
     const router = useRouter();
     const { id } = router.query;
     const title = router.query.query;
+    
 
     let arrayData = [];
     let arrayValues = [];
@@ -29,34 +30,30 @@ const Details = () => {
 
     let dataValue;
 
-    if(companyData != undefined){
+    if (companyData != undefined) {
         arrayData = Object.entries(companyData);
-       
 
-        arrayData.forEach((row) => {
-            if (row[0] === 'address') {
-                dataValue = row[1]
-            }else if(row[0] === 'age'){
-                dataValue = row[1]
-            }else if(row[0] === 'industry_risk'){
-                dataValue = row[1]
-            }else if(row[0] === 'change_in_management'){
-                dataValue = row[1]
-            }else if(row[0] === 'change_in_employees'){
-                dataValue = row[1]
-            }else if(row[0] === 'three_years_profitloss'){
-                dataValue = row[1]
-            }else if(row[0] === 'intangible_assets'){
-                dataValue = row[1]
-            }else if(row[0] === 'type_of_auditor_assistance'){
-                dataValue = row[1]
-            }else if(row[0] === 'connected_bankruptcies'){
-                dataValue = row[1]
-            }else if(row[0] === 'return_on_assets'){
-                dataValue = row[1]
-            }
+        if (arrayData[0][0] === title) {
+            dataValue = arrayData[0][1]
+        } else if (arrayData[1][0] === title) {
+            dataValue = arrayData[1][1]
+        } else if (arrayData[2][0] === title) {
+            dataValue = arrayData[2][1]
+        } else if (arrayData[3][0] === title) {
+            dataValue = arrayData[3][1]
+        } else if (arrayData[4][0] === title) {
+            dataValue = arrayData[4][1]
+        }else if(arrayData[5][0] === title){
+            dataValue = arrayData[5][1]
+        }else if(arrayData[6][0] === title){
+            dataValue = arrayData[6][1]
+        }else if(arrayData[7][0] === title){
+            dataValue = arrayData[7][1]
+        }else if(arrayData[8][0] === title){
+            dataValue = arrayData[8][1]
+        }else if(arrayData[9][0] === title){
+            dataValue = arrayData[9][1]
         }
-        )
 
 
         Object.keys(dataValue).forEach(key => {
@@ -72,10 +69,10 @@ return (
         <div className="container">
         {  
             <div class="panel panel-default">
-                <div class="panel-heading">{`${
-                    arrayValues.join("  ;  ")
-                    //arrayValues.forEach(row => document.write(row + "<br >"))
-                    }`}</div>
+                <div class="panel-heading">{
+                    //arrayValues.join("  ;  ")
+                    arrayValues.forEach(row => document.write(row + "<br >"))
+                  }</div>
                     
             </div>}
         </div>
