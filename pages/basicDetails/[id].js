@@ -3,6 +3,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
 
+import ItemBasics from "@/components/ItemBasics";
+
 const host = "http://localhost:3000";
 
 const BasicDetails = () => {
@@ -77,7 +79,7 @@ const BasicDetails = () => {
         }
 
         Object.keys(dataValue).forEach(key => {
-            arrayValues.push(` * ${key}  >>>  ${dataValue[key]}`)
+            arrayValues.push(` * ${key} :  ${dataValue[key]}`)
         })
     }
 
@@ -90,7 +92,8 @@ const BasicDetails = () => {
 
     return (
         <Layout>
-            <textarea className="result" defaultValue={result}></textarea>
+            <ItemBasics itemBasic={arrayValues}/>
+            {/* <textarea className="result" defaultValue={result}></textarea> */}
             <picture>
             <source srcset="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" type="image/svg+xml" />
             <img src="https://s27389.pcdn.co/wp-content/uploads/2021/03/fintech-disruption-of-the-banking-industry-innovation-vs-tradition.jpeg.optimal.jpeg" className="img-fluid img-thumbnail" alt="..." />

@@ -2,7 +2,7 @@
 
 const ItemData = ({itemData}) => {
 
-    console.log(itemData);
+
     
     return (
         <div className="container">

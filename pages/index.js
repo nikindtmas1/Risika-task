@@ -5,25 +5,6 @@ import Layout from "@/components/Layout";
 
 const host = "http://localhost:3000";
 
-import { createContext, useContext } from 'react';
-
-let id; 
-
-const AppContext = createContext();
-
-export function AppWrapper({ children }) {
-  let sharedState = {id}
-
-  return (
-    <AppContext.Provider value={sharedState}>
-      {children}
-    </AppContext.Provider>
-  );
-}
-
-export function useAppContext() {
-  return useContext(AppContext);
-}
 
 export default function Home() {
   const router = useRouter();
@@ -41,11 +22,9 @@ export default function Home() {
     }
   }, [companyName]);
 
-  if(companyData){
-    id = companyData[0].local_organization_id.id
-  }
+
   return (
-    <Layout>
+    <Layout >
       <div className="container">
         {companyData
           ? <div className="jumbotron">

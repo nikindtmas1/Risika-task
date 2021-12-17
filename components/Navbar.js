@@ -1,12 +1,9 @@
-//import Link from "next/link";
-// const home = "http://localhost:3000";
-
-// if(home){
 
 
-// }
+const Navbar = () => {
 
-const Navbar = () => (
+
+    return(
     <div className="container">
 
         <ul className="nav nav-pills">
@@ -14,7 +11,7 @@ const Navbar = () => (
             <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/"><h3>Search</h3></a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <a className="nav-link" href={`/highlights/37677892`}><h3>Highlights</h3></a>
             </li>
             <li className="nav-item">
@@ -25,10 +22,11 @@ const Navbar = () => (
             </li>
             <li className="nav-item">
                 <a className="nav-link" href={`/basic/37677892`}><h3>Basics</h3></a>
-            </li>
+            </li> */}
         </ul>
     </div>
-);
+    )
+    };
 
 export default Navbar;
 
